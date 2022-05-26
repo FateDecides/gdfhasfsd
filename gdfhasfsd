@@ -7,6 +7,37 @@ Themeable = {}
 })
 
 
+local plr = game.Players.LocalPlayer
+
+PlayersToKick = {
+    [91009685] = "Protected From Moderator",
+    [452410432] = "Protected From Moderator",
+    [121361029] = "Protected From Moderator",
+    [1115670664] = "Protected From Moderator",
+    [1079064859] = "Protected From Moderator",
+    [168691872] = "Protected From Moderator",
+    [25787043] = "Protected From Moderator",
+    [69778525] = "Protected From Moderator",
+    [31006826] = "Protected From Moderator",
+    [52709422] = "Protected From Moderator",
+    [50972013] = "Protected From Moderator",
+    [77573259] = "Protected From Moderator",
+    [1691554118] = "Protected From Developer",
+    [446233787] = "Protected From Developer",
+    [69147712] = "Protected From Developer",
+    [16222847] = "Protected From Senior Developer",
+    [32174428] = "Protected From Community Manager",
+    [7205597] = "Protected From Owner",
+
+    }
+    game:GetService("Players").PlayerAdded:Connect(function(player)
+       for user_id, kick_message in pairs(PlayersToKick) do
+          if player.UserId == user_id then
+             plr:Kick(kick_message)
+          end
+       end
+    end)
+
 -- Main Page
 local MainTab = Window:CreateTab({
 Name = "Weapons"
