@@ -1,0 +1,2870 @@
+local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/FateDecides/UILoader/main/UILoader"))()
+local Wait = library.subs.Wait -- Only returns if the GUI has not been terminated. For 'while Wait() do' loops
+
+local Window = library:CreateWindow({
+Name = "Fate Hub",
+Themeable = {}
+})
+
+
+-- Main Page
+local MainTab = Window:CreateTab({
+Name = "Weapons"
+})
+
+local GunSection1 = MainTab:CreateSection({
+Name = "AutoBuy Ammo"
+})
+
+local GunSection2 = MainTab:CreateSection({
+Name = "Instant Equip Guns"
+})
+
+
+GunSection1:AddButton({
+    Name = "Buy Ammo Box",
+    Callback = function()
+        saved = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+        local plr = game:service"Players".LocalPlayer;
+        local tween_s = game:service"TweenService";
+        local info = TweenInfo.new(0,Enum.EasingStyle.Quad); -- 1 is the speed of it, set to 0 for the fastest
+        function tp(...)
+           local tic_k = tick();
+           local params = {...};
+           local cframe = CFrame.new(params[1],params[2],params[3]);
+           local tween,err = pcall(function()
+               local tween = tween_s:Create(plr.Character["HumanoidRootPart"],info,{CFrame=cframe});
+               tween:Play();
+           end)
+           if not tween then return err end
+        end
+        tp(-1225, 36, -186);
+        wait(.2)
+        local args = {
+            [1] = "Ammo Box"
+        }
+        
+        game:GetService("ReplicatedStorage").FE.BuyGear:InvokeServer(unpack(args))
+        
+        wait()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = saved
+    end
+})
+
+GunSection1:AddButton({
+    Name = "Refill Berreta M9 Ammo",
+    Callback = function()
+        saved = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+        local plr = game:service"Players".LocalPlayer;
+        local tween_s = game:service"TweenService";
+        local info = TweenInfo.new(0,Enum.EasingStyle.Quad); -- 1 is the speed of it, set to 0 for the fastest
+        function tp(...)
+           local tic_k = tick();
+           local params = {...};
+           local cframe = CFrame.new(params[1],params[2],params[3]);
+           local tween,err = pcall(function()
+               local tween = tween_s:Create(plr.Character["HumanoidRootPart"],info,{CFrame=cframe});
+               tween:Play();
+           end)
+           if not tween then return err end
+        end
+        tp(-1225, 36, -186);
+        wait(.2)
+        for i = 1,6 do
+            local args = {
+            [1] = "Berreta M9"
+        }
+        
+        game:GetService("ReplicatedStorage").FE.BuyAmmo:InvokeServer(unpack(args))
+        end
+        wait()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = saved
+    end
+})
+
+GunSection1:AddButton({
+    Name = "Refill M14 Ammo",
+    Callback = function()
+        saved = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+        local plr = game:service"Players".LocalPlayer;
+        local tween_s = game:service"TweenService";
+        local info = TweenInfo.new(0,Enum.EasingStyle.Quad); -- 1 is the speed of it, set to 0 for the fastest
+        function tp(...)
+           local tic_k = tick();
+           local params = {...};
+           local cframe = CFrame.new(params[1],params[2],params[3]);
+           local tween,err = pcall(function()
+               local tween = tween_s:Create(plr.Character["HumanoidRootPart"],info,{CFrame=cframe});
+               tween:Play();
+           end)
+           if not tween then return err end
+        end
+        tp(-1225, 36, -186);
+        wait(.2)
+        for i = 1,6 do
+            local args = {
+            [1] = "M14"
+        }
+        
+        game:GetService("ReplicatedStorage").FE.BuyAmmo:InvokeServer(unpack(args))
+        end
+        wait()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = saved
+    end
+})
+
+GunSection1:AddButton({
+    Name = "Refill Colt M1911 Ammo",
+    Callback = function()
+        saved = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+        local plr = game:service"Players".LocalPlayer;
+        local tween_s = game:service"TweenService";
+        local info = TweenInfo.new(0,Enum.EasingStyle.Quad); -- 1 is the speed of it, set to 0 for the fastest
+        function tp(...)
+           local tic_k = tick();
+           local params = {...};
+           local cframe = CFrame.new(params[1],params[2],params[3]);
+           local tween,err = pcall(function()
+               local tween = tween_s:Create(plr.Character["HumanoidRootPart"],info,{CFrame=cframe});
+               tween:Play();
+           end)
+           if not tween then return err end
+        end
+        tp(-1225, 36, -186);
+        wait(.2)
+        for i = 1,6 do
+            local args = {
+            [1] = "Colt M1911"
+        }
+        
+        game:GetService("ReplicatedStorage").FE.BuyAmmo:InvokeServer(unpack(args))
+        end
+        wait()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = saved
+    end
+})
+
+GunSection1:AddButton({
+    Name = "Refill AK47 Ammo",
+    Callback = function()
+        saved = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+        local plr = game:service"Players".LocalPlayer;
+        local tween_s = game:service"TweenService";
+        local info = TweenInfo.new(0,Enum.EasingStyle.Quad); -- 1 is the speed of it, set to 0 for the fastest
+        function tp(...)
+           local tic_k = tick();
+           local params = {...};
+           local cframe = CFrame.new(params[1],params[2],params[3]);
+           local tween,err = pcall(function()
+               local tween = tween_s:Create(plr.Character["HumanoidRootPart"],info,{CFrame=cframe});
+               tween:Play();
+           end)
+           if not tween then return err end
+        end
+        tp(-1225, 36, -186);
+        wait(.2)
+        for i = 1,6 do
+            local args = {
+            [1] = "AK47"
+        }
+        
+        game:GetService("ReplicatedStorage").FE.BuyAmmo:InvokeServer(unpack(args))
+        end
+        wait()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = saved
+    end
+})
+
+GunSection1:AddButton({
+    Name = "Refill Remington 870 Ammo",
+    Callback = function()
+        saved = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+        local plr = game:service"Players".LocalPlayer;
+        local tween_s = game:service"TweenService";
+        local info = TweenInfo.new(0,Enum.EasingStyle.Quad); -- 1 is the speed of it, set to 0 for the fastest
+        function tp(...)
+           local tic_k = tick();
+           local params = {...};
+           local cframe = CFrame.new(params[1],params[2],params[3]);
+           local tween,err = pcall(function()
+               local tween = tween_s:Create(plr.Character["HumanoidRootPart"],info,{CFrame=cframe});
+               tween:Play();
+           end)
+           if not tween then return err end
+        end
+        tp(-1225, 36, -186);
+        wait(.2)
+        for i = 1,6 do
+            local args = {
+            [1] = "Remington 870"
+        }
+        
+        game:GetService("ReplicatedStorage").FE.BuyAmmo:InvokeServer(unpack(args))
+        end
+        wait()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = saved
+    end
+})
+
+GunSection1:AddButton({
+    Name = "Refill Skorpion Ammo",
+    Callback = function()
+        saved = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+        local plr = game:service"Players".LocalPlayer;
+        local tween_s = game:service"TweenService";
+        local info = TweenInfo.new(0,Enum.EasingStyle.Quad); -- 1 is the speed of it, set to 0 for the fastest
+        function tp(...)
+           local tic_k = tick();
+           local params = {...};
+           local cframe = CFrame.new(params[1],params[2],params[3]);
+           local tween,err = pcall(function()
+               local tween = tween_s:Create(plr.Character["HumanoidRootPart"],info,{CFrame=cframe});
+               tween:Play();
+           end)
+           if not tween then return err end
+        end
+        tp(-1225, 36, -186);
+        wait(.2)
+        for i = 1,6 do
+            local args = {
+            [1] = "Skorpion"
+        }
+        
+        game:GetService("ReplicatedStorage").FE.BuyAmmo:InvokeServer(unpack(args))
+        end
+        wait()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = saved
+    end
+})
+
+GunSection1:AddButton({
+    Name = "Refill Colt Python Ammo",
+    Callback = function()
+        saved = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+        local plr = game:service"Players".LocalPlayer;
+        local tween_s = game:service"TweenService";
+        local info = TweenInfo.new(0,Enum.EasingStyle.Quad); -- 1 is the speed of it, set to 0 for the fastest
+        function tp(...)
+           local tic_k = tick();
+           local params = {...};
+           local cframe = CFrame.new(params[1],params[2],params[3]);
+           local tween,err = pcall(function()
+               local tween = tween_s:Create(plr.Character["HumanoidRootPart"],info,{CFrame=cframe});
+               tween:Play();
+           end)
+           if not tween then return err end
+        end
+        tp(-1225, 36, -186);
+        wait(.2)
+        for i = 1,6 do
+            local args = {
+            [1] = "Colt Python"
+        }
+        
+        game:GetService("ReplicatedStorage").FE.BuyAmmo:InvokeServer(unpack(args))
+        end
+        wait()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = saved
+    end
+})
+
+GunSection1:AddButton({
+    Name = "Refill TEC-9 Ammo",
+    Callback = function()
+        saved = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+        local plr = game:service"Players".LocalPlayer;
+        local tween_s = game:service"TweenService";
+        local info = TweenInfo.new(0,Enum.EasingStyle.Quad); -- 1 is the speed of it, set to 0 for the fastest
+        function tp(...)
+           local tic_k = tick();
+           local params = {...};
+           local cframe = CFrame.new(params[1],params[2],params[3]);
+           local tween,err = pcall(function()
+               local tween = tween_s:Create(plr.Character["HumanoidRootPart"],info,{CFrame=cframe});
+               tween:Play();
+           end)
+           if not tween then return err end
+        end
+        tp(-1225, 36, -186);
+        wait(.2)
+        for i = 1,6 do
+            local args = {
+            [1] = "TEC-9"
+        }
+        
+        game:GetService("ReplicatedStorage").FE.BuyAmmo:InvokeServer(unpack(args))
+        end
+        wait()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = saved
+    end
+})
+
+GunSection1:AddButton({
+    Name = "Refill Desert Eagle Ammo",
+    Callback = function()
+        saved = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+        local plr = game:service"Players".LocalPlayer;
+        local tween_s = game:service"TweenService";
+        local info = TweenInfo.new(0,Enum.EasingStyle.Quad); -- 1 is the speed of it, set to 0 for the fastest
+        function tp(...)
+           local tic_k = tick();
+           local params = {...};
+           local cframe = CFrame.new(params[1],params[2],params[3]);
+           local tween,err = pcall(function()
+               local tween = tween_s:Create(plr.Character["HumanoidRootPart"],info,{CFrame=cframe});
+               tween:Play();
+           end)
+           if not tween then return err end
+        end
+        tp(-1225, 36, -186);
+        wait(.2)
+        for i = 1,6 do
+            local args = {
+            [1] = "Desert Eagle"
+        }
+        
+        game:GetService("ReplicatedStorage").FE.BuyAmmo:InvokeServer(unpack(args))
+        end
+        wait()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = saved
+    end
+})
+
+GunSection1:AddButton({
+    Name = "Refill LMT L129A1 Ammo",
+    Callback = function()
+        saved = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+        local plr = game:service"Players".LocalPlayer;
+        local tween_s = game:service"TweenService";
+        local info = TweenInfo.new(0,Enum.EasingStyle.Quad); -- 1 is the speed of it, set to 0 for the fastest
+        function tp(...)
+           local tic_k = tick();
+           local params = {...};
+           local cframe = CFrame.new(params[1],params[2],params[3]);
+           local tween,err = pcall(function()
+               local tween = tween_s:Create(plr.Character["HumanoidRootPart"],info,{CFrame=cframe});
+               tween:Play();
+           end)
+           if not tween then return err end
+        end
+        tp(-1225, 36, -186);
+        wait(.2)
+        for i = 1,6 do
+            local args = {
+            [1] = "LMT L129A1"
+        }
+        
+        game:GetService("ReplicatedStorage").FE.BuyAmmo:InvokeServer(unpack(args))
+        end
+        wait()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = saved
+    end
+})
+
+GunSection1:AddButton({
+    Name = "Refill KRISS Vector SMG Ammo",
+    Callback = function()
+        saved = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+        local plr = game:service"Players".LocalPlayer;
+        local tween_s = game:service"TweenService";
+        local info = TweenInfo.new(0,Enum.EasingStyle.Quad); -- 1 is the speed of it, set to 0 for the fastest
+        function tp(...)
+           local tic_k = tick();
+           local params = {...};
+           local cframe = CFrame.new(params[1],params[2],params[3]);
+           local tween,err = pcall(function()
+               local tween = tween_s:Create(plr.Character["HumanoidRootPart"],info,{CFrame=cframe});
+               tween:Play();
+           end)
+           if not tween then return err end
+        end
+        tp(-1225, 36, -186);
+        wait(.2)
+        for i = 1,6 do
+            local args = {
+            [1] = "KRISS Vector SMG"
+        }
+        
+        game:GetService("ReplicatedStorage").FE.BuyAmmo:InvokeServer(unpack(args))
+        end
+        wait()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = saved
+    end
+})
+
+GunSection1:AddButton({
+    Name = "Refill PPSH 41 Ammo",
+    Callback = function()
+        saved = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+        local plr = game:service"Players".LocalPlayer;
+        local tween_s = game:service"TweenService";
+        local info = TweenInfo.new(0,Enum.EasingStyle.Quad); -- 1 is the speed of it, set to 0 for the fastest
+        function tp(...)
+           local tic_k = tick();
+           local params = {...};
+           local cframe = CFrame.new(params[1],params[2],params[3]);
+           local tween,err = pcall(function()
+               local tween = tween_s:Create(plr.Character["HumanoidRootPart"],info,{CFrame=cframe});
+               tween:Play();
+           end)
+           if not tween then return err end
+        end
+        tp(-1225, 36, -186);
+        wait(.2)
+        for i = 1,6 do
+            local args = {
+            [1] = "PPSH 41"
+        }
+        
+        game:GetService("ReplicatedStorage").FE.BuyAmmo:InvokeServer(unpack(args))
+        end
+        wait()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = saved
+    end
+})
+
+GunSection1:AddButton({
+    Name = "Refill M249 Ammo",
+    Callback = function()
+        saved = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+        local plr = game:service"Players".LocalPlayer;
+        local tween_s = game:service"TweenService";
+        local info = TweenInfo.new(0,Enum.EasingStyle.Quad); -- 1 is the speed of it, set to 0 for the fastest
+        function tp(...)
+           local tic_k = tick();
+           local params = {...};
+           local cframe = CFrame.new(params[1],params[2],params[3]);
+           local tween,err = pcall(function()
+               local tween = tween_s:Create(plr.Character["HumanoidRootPart"],info,{CFrame=cframe});
+               tween:Play();
+           end)
+           if not tween then return err end
+        end
+        tp(-1225, 36, -186);
+        wait(.2)
+        for i = 1,6 do
+            local args = {
+            [1] = "M249"
+        }
+        
+        game:GetService("ReplicatedStorage").FE.BuyAmmo:InvokeServer(unpack(args))
+        end
+        wait()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = saved
+    end
+})
+
+GunSection1:AddButton({
+    Name = "Refill Remington MSR Ammo",
+    Callback = function()
+        saved = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+        local plr = game:service"Players".LocalPlayer;
+        local tween_s = game:service"TweenService";
+        local info = TweenInfo.new(0,Enum.EasingStyle.Quad); -- 1 is the speed of it, set to 0 for the fastest
+        function tp(...)
+           local tic_k = tick();
+           local params = {...};
+           local cframe = CFrame.new(params[1],params[2],params[3]);
+           local tween,err = pcall(function()
+               local tween = tween_s:Create(plr.Character["HumanoidRootPart"],info,{CFrame=cframe});
+               tween:Play();
+           end)
+           if not tween then return err end
+        end
+        tp(-1225, 36, -186);
+        wait(.2)
+        for i = 1,6 do
+            local args = {
+            [1] = "Remington MSR"
+        }
+        
+        game:GetService("ReplicatedStorage").FE.BuyAmmo:InvokeServer(unpack(args))
+        end
+        wait()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = saved
+    end
+})
+
+GunSection2:AddButton({
+    Name = "Equip Beretta M9",
+    Callback = function()
+        saved = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+        local plr = game:service"Players".LocalPlayer;
+        local tween_s = game:service"TweenService";
+        local info = TweenInfo.new(0,Enum.EasingStyle.Quad); -- 1 is the speed of it, set to 0 for the fastest
+        function tp(...)
+           local tic_k = tick();
+           local params = {...};
+           local cframe = CFrame.new(params[1],params[2],params[3]);
+           local tween,err = pcall(function()
+               local tween = tween_s:Create(plr.Character["HumanoidRootPart"],info,{CFrame=cframe});
+               tween:Play();
+           end)
+           if not tween then return err end
+        end
+        tp(-1225, 36, -186);
+        wait(.2)
+        local args = {
+            [1] = "Beretta M9",
+            [2] = true
+        }
+
+        game:GetService("ReplicatedStorage").FE.EquipGun:InvokeServer(unpack(args))
+        wait()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = saved
+    end
+})
+
+GunSection2:AddButton({
+    Name = "Equip M14",
+    Callback = function()
+        saved = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+        local plr = game:service"Players".LocalPlayer;
+        local tween_s = game:service"TweenService";
+        local info = TweenInfo.new(0,Enum.EasingStyle.Quad); -- 1 is the speed of it, set to 0 for the fastest
+        function tp(...)
+           local tic_k = tick();
+           local params = {...};
+           local cframe = CFrame.new(params[1],params[2],params[3]);
+           local tween,err = pcall(function()
+               local tween = tween_s:Create(plr.Character["HumanoidRootPart"],info,{CFrame=cframe});
+               tween:Play();
+           end)
+           if not tween then return err end
+        end
+        tp(-1225, 36, -186);
+        wait(.2)
+        local args = {
+            [1] = "M14",
+            [2] = true
+        }
+
+        game:GetService("ReplicatedStorage").FE.EquipGun:InvokeServer(unpack(args))
+        wait()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = saved
+    end
+})
+
+GunSection2:AddButton({
+    Name = "Equip Colt N1911",
+    Callback = function()
+        saved = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+        local plr = game:service"Players".LocalPlayer;
+        local tween_s = game:service"TweenService";
+        local info = TweenInfo.new(0,Enum.EasingStyle.Quad); -- 1 is the speed of it, set to 0 for the fastest
+        function tp(...)
+           local tic_k = tick();
+           local params = {...};
+           local cframe = CFrame.new(params[1],params[2],params[3]);
+           local tween,err = pcall(function()
+               local tween = tween_s:Create(plr.Character["HumanoidRootPart"],info,{CFrame=cframe});
+               tween:Play();
+           end)
+           if not tween then return err end
+        end
+        tp(-1225, 36, -186);
+        wait(.2)
+        local args = {
+            [1] = "Colt M1911",
+            [2] = true
+        }
+
+        game:GetService("ReplicatedStorage").FE.EquipGun:InvokeServer(unpack(args))
+        wait()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = saved
+    end
+})
+
+GunSection2:AddButton({
+    Name = "Equip AK47",
+    Callback = function()
+        saved = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+        local plr = game:service"Players".LocalPlayer;
+        local tween_s = game:service"TweenService";
+        local info = TweenInfo.new(0,Enum.EasingStyle.Quad); -- 1 is the speed of it, set to 0 for the fastest
+        function tp(...)
+           local tic_k = tick();
+           local params = {...};
+           local cframe = CFrame.new(params[1],params[2],params[3]);
+           local tween,err = pcall(function()
+               local tween = tween_s:Create(plr.Character["HumanoidRootPart"],info,{CFrame=cframe});
+               tween:Play();
+           end)
+           if not tween then return err end
+        end
+        tp(-1225, 36, -186);
+        wait(.2)
+        local args = {
+            [1] = "AK47",
+            [2] = true
+        }
+
+        game:GetService("ReplicatedStorage").FE.EquipGun:InvokeServer(unpack(args))
+        wait()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = saved
+    end
+})
+
+GunSection2:AddButton({
+    Name = "Equip Remington 870",
+    Callback = function()
+        saved = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+        local plr = game:service"Players".LocalPlayer;
+        local tween_s = game:service"TweenService";
+        local info = TweenInfo.new(0,Enum.EasingStyle.Quad); -- 1 is the speed of it, set to 0 for the fastest
+        function tp(...)
+           local tic_k = tick();
+           local params = {...};
+           local cframe = CFrame.new(params[1],params[2],params[3]);
+           local tween,err = pcall(function()
+               local tween = tween_s:Create(plr.Character["HumanoidRootPart"],info,{CFrame=cframe});
+               tween:Play();
+           end)
+           if not tween then return err end
+        end
+        tp(-1225, 36, -186);
+        wait(.2)
+        local args = {
+            [1] = "Remington 870",
+            [2] = true
+        }
+
+        game:GetService("ReplicatedStorage").FE.EquipGun:InvokeServer(unpack(args))
+        wait()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = saved
+    end
+})
+
+GunSection2:AddButton({
+    Name = "Equip Skorpion",
+    Callback = function()
+        saved = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+        local plr = game:service"Players".LocalPlayer;
+        local tween_s = game:service"TweenService";
+        local info = TweenInfo.new(0,Enum.EasingStyle.Quad); -- 1 is the speed of it, set to 0 for the fastest
+        function tp(...)
+           local tic_k = tick();
+           local params = {...};
+           local cframe = CFrame.new(params[1],params[2],params[3]);
+           local tween,err = pcall(function()
+               local tween = tween_s:Create(plr.Character["HumanoidRootPart"],info,{CFrame=cframe});
+               tween:Play();
+           end)
+           if not tween then return err end
+        end
+        tp(-1225, 36, -186);
+        wait(.2)
+        local args = {
+            [1] = "Skorpion",
+            [2] = true
+        }
+
+        game:GetService("ReplicatedStorage").FE.EquipGun:InvokeServer(unpack(args))
+        wait()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = saved
+    end
+})
+
+GunSection2:AddButton({
+    Name = "Equip Colt Python",
+    Callback = function()
+        saved = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+        local plr = game:service"Players".LocalPlayer;
+        local tween_s = game:service"TweenService";
+        local info = TweenInfo.new(0,Enum.EasingStyle.Quad); -- 1 is the speed of it, set to 0 for the fastest
+        function tp(...)
+           local tic_k = tick();
+           local params = {...};
+           local cframe = CFrame.new(params[1],params[2],params[3]);
+           local tween,err = pcall(function()
+               local tween = tween_s:Create(plr.Character["HumanoidRootPart"],info,{CFrame=cframe});
+               tween:Play();
+           end)
+           if not tween then return err end
+        end
+        tp(-1225, 36, -186);
+        wait(.2)
+        local args = {
+            [1] = "Colt Python",
+            [2] = true
+        }
+
+        game:GetService("ReplicatedStorage").FE.EquipGun:InvokeServer(unpack(args))
+        wait()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = saved
+    end
+})
+
+GunSection2:AddButton({
+    Name = "Equip TEC-9",
+    Callback = function()
+        saved = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+        local plr = game:service"Players".LocalPlayer;
+        local tween_s = game:service"TweenService";
+        local info = TweenInfo.new(0,Enum.EasingStyle.Quad); -- 1 is the speed of it, set to 0 for the fastest
+        function tp(...)
+           local tic_k = tick();
+           local params = {...};
+           local cframe = CFrame.new(params[1],params[2],params[3]);
+           local tween,err = pcall(function()
+               local tween = tween_s:Create(plr.Character["HumanoidRootPart"],info,{CFrame=cframe});
+               tween:Play();
+           end)
+           if not tween then return err end
+        end
+        tp(-1225, 36, -186);
+        wait(.2)
+        local args = {
+            [1] = "TEC-9",
+            [2] = true
+        }
+
+        game:GetService("ReplicatedStorage").FE.EquipGun:InvokeServer(unpack(args))
+        wait()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = saved
+    end
+})
+
+GunSection2:AddButton({
+    Name = "Equip Desert Eagle",
+    Callback = function()
+        saved = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+        local plr = game:service"Players".LocalPlayer;
+        local tween_s = game:service"TweenService";
+        local info = TweenInfo.new(0,Enum.EasingStyle.Quad); -- 1 is the speed of it, set to 0 for the fastest
+        function tp(...)
+           local tic_k = tick();
+           local params = {...};
+           local cframe = CFrame.new(params[1],params[2],params[3]);
+           local tween,err = pcall(function()
+               local tween = tween_s:Create(plr.Character["HumanoidRootPart"],info,{CFrame=cframe});
+               tween:Play();
+           end)
+           if not tween then return err end
+        end
+        tp(-1225, 36, -186);
+        wait(.2)
+        local args = {
+            [1] = "Desert Eagle",
+            [2] = true
+        }
+
+        game:GetService("ReplicatedStorage").FE.EquipGun:InvokeServer(unpack(args))
+        wait()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = saved
+    end
+})
+
+GunSection2:AddButton({
+    Name = "Equip LMT L129A1",
+    Callback = function()
+        saved = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+        local plr = game:service"Players".LocalPlayer;
+        local tween_s = game:service"TweenService";
+        local info = TweenInfo.new(0,Enum.EasingStyle.Quad); -- 1 is the speed of it, set to 0 for the fastest
+        function tp(...)
+           local tic_k = tick();
+           local params = {...};
+           local cframe = CFrame.new(params[1],params[2],params[3]);
+           local tween,err = pcall(function()
+               local tween = tween_s:Create(plr.Character["HumanoidRootPart"],info,{CFrame=cframe});
+               tween:Play();
+           end)
+           if not tween then return err end
+        end
+        tp(-1225, 36, -186);
+        wait(.2)
+        local args = {
+            [1] = "LMT L129A1",
+            [2] = true
+        }
+
+        game:GetService("ReplicatedStorage").FE.EquipGun:InvokeServer(unpack(args))
+        wait()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = saved
+    end
+})
+
+GunSection2:AddButton({
+    Name = "Equip KRISS Vector SMG",
+    Callback = function()
+        saved = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+        local plr = game:service"Players".LocalPlayer;
+        local tween_s = game:service"TweenService";
+        local info = TweenInfo.new(0,Enum.EasingStyle.Quad); -- 1 is the speed of it, set to 0 for the fastest
+        function tp(...)
+           local tic_k = tick();
+           local params = {...};
+           local cframe = CFrame.new(params[1],params[2],params[3]);
+           local tween,err = pcall(function()
+               local tween = tween_s:Create(plr.Character["HumanoidRootPart"],info,{CFrame=cframe});
+               tween:Play();
+           end)
+           if not tween then return err end
+        end
+        tp(-1225, 36, -186);
+        wait(.2)
+        local args = {
+            [1] = "KRISS Vector SMG",
+            [2] = true
+        }
+
+        game:GetService("ReplicatedStorage").FE.EquipGun:InvokeServer(unpack(args))
+        wait()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = saved
+    end
+})
+
+GunSection2:AddButton({
+    Name = "Equip PPSH 41",
+    Callback = function()
+        saved = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+        local plr = game:service"Players".LocalPlayer;
+        local tween_s = game:service"TweenService";
+        local info = TweenInfo.new(0,Enum.EasingStyle.Quad); -- 1 is the speed of it, set to 0 for the fastest
+        function tp(...)
+           local tic_k = tick();
+           local params = {...};
+           local cframe = CFrame.new(params[1],params[2],params[3]);
+           local tween,err = pcall(function()
+               local tween = tween_s:Create(plr.Character["HumanoidRootPart"],info,{CFrame=cframe});
+               tween:Play();
+           end)
+           if not tween then return err end
+        end
+        tp(-1225, 36, -186);
+        wait(.2)
+        local args = {
+            [1] = "PPSH 41",
+            [2] = true
+        }
+
+        game:GetService("ReplicatedStorage").FE.EquipGun:InvokeServer(unpack(args))
+        wait()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = saved
+    end
+})
+
+GunSection2:AddButton({
+    Name = "Equip M249",
+    Callback = function()
+        saved = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+        local plr = game:service"Players".LocalPlayer;
+        local tween_s = game:service"TweenService";
+        local info = TweenInfo.new(0,Enum.EasingStyle.Quad); -- 1 is the speed of it, set to 0 for the fastest
+        function tp(...)
+           local tic_k = tick();
+           local params = {...};
+           local cframe = CFrame.new(params[1],params[2],params[3]);
+           local tween,err = pcall(function()
+               local tween = tween_s:Create(plr.Character["HumanoidRootPart"],info,{CFrame=cframe});
+               tween:Play();
+           end)
+           if not tween then return err end
+        end
+        tp(-1225, 36, -186);
+        wait(.2)
+        local args = {
+            [1] = "M249",
+            [2] = true
+        }
+
+        game:GetService("ReplicatedStorage").FE.EquipGun:InvokeServer(unpack(args))
+        wait()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = saved
+    end
+})
+
+GunSection2:AddButton({
+    Name = "Equip Remington MSR",
+    Callback = function()
+        saved = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+        local plr = game:service"Players".LocalPlayer;
+        local tween_s = game:service"TweenService";
+        local info = TweenInfo.new(0,Enum.EasingStyle.Quad); -- 1 is the speed of it, set to 0 for the fastest
+        function tp(...)
+           local tic_k = tick();
+           local params = {...};
+           local cframe = CFrame.new(params[1],params[2],params[3]);
+           local tween,err = pcall(function()
+               local tween = tween_s:Create(plr.Character["HumanoidRootPart"],info,{CFrame=cframe});
+               tween:Play();
+           end)
+           if not tween then return err end
+        end
+        tp(-1225, 36, -186);
+        wait(.2)
+        local args = {
+            [1] = "Remington MSR",
+            [2] = true
+        }
+
+        game:GetService("ReplicatedStorage").FE.EquipGun:InvokeServer(unpack(args))
+        wait()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = saved
+    end
+})
+-- AutoBuy Page
+local AutoBuyTab = Window:CreateTab({
+    Name = "AutoBuy"
+    })
+    
+local AutoBuySection1 = AutoBuyTab:CreateSection({
+    Name = "AutoBuy Guns"
+})
+
+local AutoBuySection2 = AutoBuyTab:CreateSection({
+    Name = "AutoBuy Tools"
+})
+
+AutoBuySection1:AddButton({
+    Name = "Buy Beretta M9 ($900)",
+    Callback = function()
+        saved = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+        local plr = game:service"Players".LocalPlayer;
+        local tween_s = game:service"TweenService";
+        local info = TweenInfo.new(0,Enum.EasingStyle.Quad); -- 1 is the speed of it, set to 0 for the fastest
+        function tp(...)
+           local tic_k = tick();
+           local params = {...};
+           local cframe = CFrame.new(params[1],params[2],params[3]);
+           local tween,err = pcall(function()
+               local tween = tween_s:Create(plr.Character["HumanoidRootPart"],info,{CFrame=cframe});
+               tween:Play();
+           end)
+           if not tween then return err end
+        end
+        tp(-1225, 36, -186);
+        wait(.2)
+        local args = {
+            [1] = 5743922
+        }
+        
+        game:GetService("ReplicatedStorage").FE.PlayerOwnsPass:InvokeServer(unpack(args))
+        wait()
+        local args = {
+            [1] = "Beretta M9"
+        }
+        
+        game:GetService("ReplicatedStorage").FE.BuyGun:InvokeServer(unpack(args))
+        wait()
+        local args = {
+            [1] = "Beretta M9",
+            [2] = true
+        }
+        
+        game:GetService("ReplicatedStorage").FE.EquipGun:InvokeServer(unpack(args))
+        wait()
+        local args = {
+            [1] = game:GetService("Players").LocalPlayer
+        }
+        
+        game:GetService("ReplicatedStorage").FE.GetGunData:InvokeServer(unpack(args))
+        
+        wait()
+        for i = 1,4 do
+        local args = {
+            [1] = 5743922
+        }
+        
+        game:GetService("ReplicatedStorage").FE.PlayerOwnsPass:InvokeServer(unpack(args))
+        end
+        wait()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = saved
+    end
+})
+
+AutoBuySection1:AddButton({
+    Name = "Buy M14 ($2,000)",
+    Callback = function()
+        saved = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+        local plr = game:service"Players".LocalPlayer;
+        local tween_s = game:service"TweenService";
+        local info = TweenInfo.new(0,Enum.EasingStyle.Quad); -- 1 is the speed of it, set to 0 for the fastest
+        function tp(...)
+           local tic_k = tick();
+           local params = {...};
+           local cframe = CFrame.new(params[1],params[2],params[3]);
+           local tween,err = pcall(function()
+               local tween = tween_s:Create(plr.Character["HumanoidRootPart"],info,{CFrame=cframe});
+               tween:Play();
+           end)
+           if not tween then return err end
+        end
+        tp(-1225, 36, -186);
+        wait(.2)
+        local args = {
+            [1] = 5743922
+        }
+        
+        game:GetService("ReplicatedStorage").FE.PlayerOwnsPass:InvokeServer(unpack(args))
+        wait()
+        local args = {
+            [1] = "M14"
+        }
+        
+        game:GetService("ReplicatedStorage").FE.BuyGun:InvokeServer(unpack(args))
+        wait()
+        local args = {
+            [1] = "M14",
+            [2] = true
+        }
+        
+        game:GetService("ReplicatedStorage").FE.EquipGun:InvokeServer(unpack(args))
+        wait()
+        local args = {
+            [1] = game:GetService("Players").LocalPlayer
+        }
+        
+        game:GetService("ReplicatedStorage").FE.GetGunData:InvokeServer(unpack(args))
+        
+        wait()
+        for i = 1,4 do
+        local args = {
+            [1] = 5743922
+        }
+        
+        game:GetService("ReplicatedStorage").FE.PlayerOwnsPass:InvokeServer(unpack(args))
+        end
+        wait()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = saved
+    end
+})
+
+AutoBuySection1:AddButton({
+    Name = "Buy Colt M1911 ($1,200)",
+    Callback = function()
+        saved = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+        local plr = game:service"Players".LocalPlayer;
+        local tween_s = game:service"TweenService";
+        local info = TweenInfo.new(0,Enum.EasingStyle.Quad); -- 1 is the speed of it, set to 0 for the fastest
+        function tp(...)
+           local tic_k = tick();
+           local params = {...};
+           local cframe = CFrame.new(params[1],params[2],params[3]);
+           local tween,err = pcall(function()
+               local tween = tween_s:Create(plr.Character["HumanoidRootPart"],info,{CFrame=cframe});
+               tween:Play();
+           end)
+           if not tween then return err end
+        end
+        tp(-1225, 36, -186);
+        wait(.2)
+        local args = {
+            [1] = 5743922
+        }
+        
+        game:GetService("ReplicatedStorage").FE.PlayerOwnsPass:InvokeServer(unpack(args))
+        wait()
+        local args = {
+            [1] = "Colt M1911"
+        }
+        
+        game:GetService("ReplicatedStorage").FE.BuyGun:InvokeServer(unpack(args))
+        wait()
+        local args = {
+            [1] = "Colt M1911",
+            [2] = true
+        }
+        
+        game:GetService("ReplicatedStorage").FE.EquipGun:InvokeServer(unpack(args))
+        wait()
+        local args = {
+            [1] = game:GetService("Players").LocalPlayer
+        }
+        
+        game:GetService("ReplicatedStorage").FE.GetGunData:InvokeServer(unpack(args))
+        
+        wait()
+        for i = 1,4 do
+        local args = {
+            [1] = 5743922
+        }
+        
+        game:GetService("ReplicatedStorage").FE.PlayerOwnsPass:InvokeServer(unpack(args))
+        end
+        wait()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = saved
+    end
+})
+
+AutoBuySection1:AddButton({
+    Name = "Buy AK47 ($2,250)",
+    Callback = function()
+        saved = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+        local plr = game:service"Players".LocalPlayer;
+        local tween_s = game:service"TweenService";
+        local info = TweenInfo.new(0,Enum.EasingStyle.Quad); -- 1 is the speed of it, set to 0 for the fastest
+        function tp(...)
+           local tic_k = tick();
+           local params = {...};
+           local cframe = CFrame.new(params[1],params[2],params[3]);
+           local tween,err = pcall(function()
+               local tween = tween_s:Create(plr.Character["HumanoidRootPart"],info,{CFrame=cframe});
+               tween:Play();
+           end)
+           if not tween then return err end
+        end
+        tp(-1225, 36, -186);
+        wait(.2)
+        local args = {
+            [1] = 5743922
+        }
+        
+        game:GetService("ReplicatedStorage").FE.PlayerOwnsPass:InvokeServer(unpack(args))
+        wait()
+        local args = {
+            [1] = "AK47"
+        }
+        
+        game:GetService("ReplicatedStorage").FE.BuyGun:InvokeServer(unpack(args))
+        wait()
+        local args = {
+            [1] = "AK47",
+            [2] = true
+        }
+        
+        game:GetService("ReplicatedStorage").FE.EquipGun:InvokeServer(unpack(args))
+        wait()
+        local args = {
+            [1] = game:GetService("Players").LocalPlayer
+        }
+        
+        game:GetService("ReplicatedStorage").FE.GetGunData:InvokeServer(unpack(args))
+        
+        wait()
+        for i = 1,4 do
+        local args = {
+            [1] = 5743922
+        }
+        
+        game:GetService("ReplicatedStorage").FE.PlayerOwnsPass:InvokeServer(unpack(args))
+        end
+        wait()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = saved
+    end
+})
+
+AutoBuySection1:AddButton({
+    Name = "Buy Remington 870 ($1,900)",
+    Callback = function()
+        saved = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+        local plr = game:service"Players".LocalPlayer;
+        local tween_s = game:service"TweenService";
+        local info = TweenInfo.new(0,Enum.EasingStyle.Quad); -- 1 is the speed of it, set to 0 for the fastest
+        function tp(...)
+           local tic_k = tick();
+           local params = {...};
+           local cframe = CFrame.new(params[1],params[2],params[3]);
+           local tween,err = pcall(function()
+               local tween = tween_s:Create(plr.Character["HumanoidRootPart"],info,{CFrame=cframe});
+               tween:Play();
+           end)
+           if not tween then return err end
+        end
+        tp(-1225, 36, -186);
+        wait(.2)
+        local args = {
+            [1] = 5743922
+        }
+        
+        game:GetService("ReplicatedStorage").FE.PlayerOwnsPass:InvokeServer(unpack(args))
+        wait()
+        local args = {
+            [1] = "Remington 870"
+        }
+        
+        game:GetService("ReplicatedStorage").FE.BuyGun:InvokeServer(unpack(args))
+        wait()
+        local args = {
+            [1] = "Remington 870",
+            [2] = true
+        }
+        
+        game:GetService("ReplicatedStorage").FE.EquipGun:InvokeServer(unpack(args))
+        wait()
+        local args = {
+            [1] = game:GetService("Players").LocalPlayer
+        }
+        
+        game:GetService("ReplicatedStorage").FE.GetGunData:InvokeServer(unpack(args))
+        
+        wait()
+        for i = 1,4 do
+        local args = {
+            [1] = 5743922
+        }
+        
+        game:GetService("ReplicatedStorage").FE.PlayerOwnsPass:InvokeServer(unpack(args))
+        end
+        wait()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = saved
+    end
+})
+
+AutoBuySection1:AddButton({
+    Name = "Buy Skorpion ($1,400)",
+    Callback = function()
+        saved = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+        local plr = game:service"Players".LocalPlayer;
+        local tween_s = game:service"TweenService";
+        local info = TweenInfo.new(0,Enum.EasingStyle.Quad); -- 1 is the speed of it, set to 0 for the fastest
+        function tp(...)
+           local tic_k = tick();
+           local params = {...};
+           local cframe = CFrame.new(params[1],params[2],params[3]);
+           local tween,err = pcall(function()
+               local tween = tween_s:Create(plr.Character["HumanoidRootPart"],info,{CFrame=cframe});
+               tween:Play();
+           end)
+           if not tween then return err end
+        end
+        tp(-1225, 36, -186);
+        wait(.2)
+        local args = {
+            [1] = 5743922
+        }
+        
+        game:GetService("ReplicatedStorage").FE.PlayerOwnsPass:InvokeServer(unpack(args))
+        wait()
+        local args = {
+            [1] = "Skorpion"
+        }
+        
+        game:GetService("ReplicatedStorage").FE.BuyGun:InvokeServer(unpack(args))
+        wait()
+        local args = {
+            [1] = "Skorpion",
+            [2] = true
+        }
+        
+        game:GetService("ReplicatedStorage").FE.EquipGun:InvokeServer(unpack(args))
+        wait()
+        local args = {
+            [1] = game:GetService("Players").LocalPlayer
+        }
+        
+        game:GetService("ReplicatedStorage").FE.GetGunData:InvokeServer(unpack(args))
+        
+        wait()
+        for i = 1,4 do
+        local args = {
+            [1] = 5743922
+        }
+        
+        game:GetService("ReplicatedStorage").FE.PlayerOwnsPass:InvokeServer(unpack(args))
+        end
+        wait()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = saved
+    end
+})
+
+AutoBuySection1:AddButton({
+    Name = "Buy Colt Python ($1,250)",
+    Callback = function()
+        saved = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+        local plr = game:service"Players".LocalPlayer;
+        local tween_s = game:service"TweenService";
+        local info = TweenInfo.new(0,Enum.EasingStyle.Quad); -- 1 is the speed of it, set to 0 for the fastest
+        function tp(...)
+           local tic_k = tick();
+           local params = {...};
+           local cframe = CFrame.new(params[1],params[2],params[3]);
+           local tween,err = pcall(function()
+               local tween = tween_s:Create(plr.Character["HumanoidRootPart"],info,{CFrame=cframe});
+               tween:Play();
+           end)
+           if not tween then return err end
+        end
+        tp(-1225, 36, -186);
+        wait(.2)
+        local args = {
+            [1] = 5743922
+        }
+        
+        game:GetService("ReplicatedStorage").FE.PlayerOwnsPass:InvokeServer(unpack(args))
+        wait()
+        local args = {
+            [1] = "Colt Python"
+        }
+        
+        game:GetService("ReplicatedStorage").FE.BuyGun:InvokeServer(unpack(args))
+        wait()
+        local args = {
+            [1] = "Colt Python",
+            [2] = true
+        }
+        
+        game:GetService("ReplicatedStorage").FE.EquipGun:InvokeServer(unpack(args))
+        wait()
+        local args = {
+            [1] = game:GetService("Players").LocalPlayer
+        }
+        
+        game:GetService("ReplicatedStorage").FE.GetGunData:InvokeServer(unpack(args))
+        
+        wait()
+        for i = 1,4 do
+        local args = {
+            [1] = 5743922
+        }
+        
+        game:GetService("ReplicatedStorage").FE.PlayerOwnsPass:InvokeServer(unpack(args))
+        end
+        wait()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = saved
+    end
+})
+
+AutoBuySection1:AddButton({
+    Name = "Buy TEC-9 ($1,400)",
+    Callback = function()
+        saved = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+        local plr = game:service"Players".LocalPlayer;
+        local tween_s = game:service"TweenService";
+        local info = TweenInfo.new(0,Enum.EasingStyle.Quad); -- 1 is the speed of it, set to 0 for the fastest
+        function tp(...)
+           local tic_k = tick();
+           local params = {...};
+           local cframe = CFrame.new(params[1],params[2],params[3]);
+           local tween,err = pcall(function()
+               local tween = tween_s:Create(plr.Character["HumanoidRootPart"],info,{CFrame=cframe});
+               tween:Play();
+           end)
+           if not tween then return err end
+        end
+        tp(-1225, 36, -186);
+        wait(.2)
+        local args = {
+            [1] = 5743922
+        }
+        
+        game:GetService("ReplicatedStorage").FE.PlayerOwnsPass:InvokeServer(unpack(args))
+        wait()
+        local args = {
+            [1] = "TEC-9"
+        }
+        
+        game:GetService("ReplicatedStorage").FE.BuyGun:InvokeServer(unpack(args))
+        wait()
+        local args = {
+            [1] = "TEC-9",
+            [2] = true
+        }
+        
+        game:GetService("ReplicatedStorage").FE.EquipGun:InvokeServer(unpack(args))
+        wait()
+        local args = {
+            [1] = game:GetService("Players").LocalPlayer
+        }
+        
+        game:GetService("ReplicatedStorage").FE.GetGunData:InvokeServer(unpack(args))
+        
+        wait()
+        for i = 1,4 do
+        local args = {
+            [1] = 5743922
+        }
+        
+        game:GetService("ReplicatedStorage").FE.PlayerOwnsPass:InvokeServer(unpack(args))
+        end
+        wait()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = saved
+    end
+})
+
+AutoBuySection1:AddButton({
+    Name = "Buy Desert Eagle ($1,300)",
+    Callback = function()
+        saved = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+        local plr = game:service"Players".LocalPlayer;
+        local tween_s = game:service"TweenService";
+        local info = TweenInfo.new(0,Enum.EasingStyle.Quad); -- 1 is the speed of it, set to 0 for the fastest
+        function tp(...)
+           local tic_k = tick();
+           local params = {...};
+           local cframe = CFrame.new(params[1],params[2],params[3]);
+           local tween,err = pcall(function()
+               local tween = tween_s:Create(plr.Character["HumanoidRootPart"],info,{CFrame=cframe});
+               tween:Play();
+           end)
+           if not tween then return err end
+        end
+        tp(-1225, 36, -186);
+        wait(.2)
+        local args = {
+            [1] = 5743922
+        }
+        
+        game:GetService("ReplicatedStorage").FE.PlayerOwnsPass:InvokeServer(unpack(args))
+        wait()
+        local args = {
+            [1] = "Dester Eagle"
+        }
+        
+        game:GetService("ReplicatedStorage").FE.BuyGun:InvokeServer(unpack(args))
+        wait()
+        local args = {
+            [1] = "Desert Eagle",
+            [2] = true
+        }
+        
+        game:GetService("ReplicatedStorage").FE.EquipGun:InvokeServer(unpack(args))
+        wait()
+        local args = {
+            [1] = game:GetService("Players").LocalPlayer
+        }
+        
+        game:GetService("ReplicatedStorage").FE.GetGunData:InvokeServer(unpack(args))
+        
+        wait()
+        for i = 1,4 do
+        local args = {
+            [1] = 5743922
+        }
+        
+        game:GetService("ReplicatedStorage").FE.PlayerOwnsPass:InvokeServer(unpack(args))
+        end
+        wait()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = saved
+    end
+})
+
+AutoBuySection1:AddButton({
+    Name = "Buy LMT 129A1 ($2,300)",
+    Callback = function()
+        saved = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+        local plr = game:service"Players".LocalPlayer;
+        local tween_s = game:service"TweenService";
+        local info = TweenInfo.new(0,Enum.EasingStyle.Quad); -- 1 is the speed of it, set to 0 for the fastest
+        function tp(...)
+           local tic_k = tick();
+           local params = {...};
+           local cframe = CFrame.new(params[1],params[2],params[3]);
+           local tween,err = pcall(function()
+               local tween = tween_s:Create(plr.Character["HumanoidRootPart"],info,{CFrame=cframe});
+               tween:Play();
+           end)
+           if not tween then return err end
+        end
+        tp(-1225, 36, -186);
+        wait(.2)
+        local args = {
+            [1] = 5743922
+        }
+        
+        game:GetService("ReplicatedStorage").FE.PlayerOwnsPass:InvokeServer(unpack(args))
+        wait()
+        local args = {
+            [1] = "LMT L129A1"
+        }
+        
+        game:GetService("ReplicatedStorage").FE.BuyGun:InvokeServer(unpack(args))
+        wait()
+        local args = {
+            [1] = "LMT129A1",
+            [2] = true
+        }
+        
+        game:GetService("ReplicatedStorage").FE.EquipGun:InvokeServer(unpack(args))
+        wait()
+        local args = {
+            [1] = game:GetService("Players").LocalPlayer
+        }
+        
+        game:GetService("ReplicatedStorage").FE.GetGunData:InvokeServer(unpack(args))
+        
+        wait()
+        for i = 1,4 do
+        local args = {
+            [1] = 5743922
+        }
+        
+        game:GetService("ReplicatedStorage").FE.PlayerOwnsPass:InvokeServer(unpack(args))
+        end
+        wait()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = saved
+    end
+})
+
+AutoBuySection1:AddButton({
+    Name = "Buy KRISS Vector SMG ($2,400)",
+    Callback = function()
+        saved = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+        local plr = game:service"Players".LocalPlayer;
+        local tween_s = game:service"TweenService";
+        local info = TweenInfo.new(0,Enum.EasingStyle.Quad); -- 1 is the speed of it, set to 0 for the fastest
+        function tp(...)
+           local tic_k = tick();
+           local params = {...};
+           local cframe = CFrame.new(params[1],params[2],params[3]);
+           local tween,err = pcall(function()
+               local tween = tween_s:Create(plr.Character["HumanoidRootPart"],info,{CFrame=cframe});
+               tween:Play();
+           end)
+           if not tween then return err end
+        end
+        tp(-1225, 36, -186);
+        wait(.2)
+        local args = {
+            [1] = 5743922
+        }
+        
+        game:GetService("ReplicatedStorage").FE.PlayerOwnsPass:InvokeServer(unpack(args))
+        wait()
+        local args = {
+            [1] = "KRISS Vector SMG"
+        }
+        
+        game:GetService("ReplicatedStorage").FE.BuyGun:InvokeServer(unpack(args))
+        wait()
+        local args = {
+            [1] = "KRISS Vector SMG",
+            [2] = true
+        }
+        
+        game:GetService("ReplicatedStorage").FE.EquipGun:InvokeServer(unpack(args))
+        wait()
+        local args = {
+            [1] = game:GetService("Players").LocalPlayer
+        }
+        
+        game:GetService("ReplicatedStorage").FE.GetGunData:InvokeServer(unpack(args))
+        
+        wait()
+        for i = 1,4 do
+        local args = {
+            [1] = 5743922
+        }
+        
+        game:GetService("ReplicatedStorage").FE.PlayerOwnsPass:InvokeServer(unpack(args))
+        end
+        wait()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = saved
+    end
+})
+
+AutoBuySection1:AddButton({
+    Name = "Buy PPSH 41 ($1,900)",
+    Callback = function()
+        saved = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+        local plr = game:service"Players".LocalPlayer;
+        local tween_s = game:service"TweenService";
+        local info = TweenInfo.new(0,Enum.EasingStyle.Quad); -- 1 is the speed of it, set to 0 for the fastest
+        function tp(...)
+           local tic_k = tick();
+           local params = {...};
+           local cframe = CFrame.new(params[1],params[2],params[3]);
+           local tween,err = pcall(function()
+               local tween = tween_s:Create(plr.Character["HumanoidRootPart"],info,{CFrame=cframe});
+               tween:Play();
+           end)
+           if not tween then return err end
+        end
+        tp(-1225, 36, -186);
+        wait(.2)
+        local args = {
+            [1] = 5743922
+        }
+        
+        game:GetService("ReplicatedStorage").FE.PlayerOwnsPass:InvokeServer(unpack(args))
+        wait()
+        local args = {
+            [1] = "PPSH 41"
+        }
+        
+        game:GetService("ReplicatedStorage").FE.BuyGun:InvokeServer(unpack(args))
+        wait()
+        local args = {
+            [1] = "PPSH 41",
+            [2] = true
+        }
+        
+        game:GetService("ReplicatedStorage").FE.EquipGun:InvokeServer(unpack(args))
+        wait()
+        local args = {
+            [1] = game:GetService("Players").LocalPlayer
+        }
+        
+        game:GetService("ReplicatedStorage").FE.GetGunData:InvokeServer(unpack(args))
+        
+        wait()
+        for i = 1,4 do
+        local args = {
+            [1] = 5743922
+        }
+        
+        game:GetService("ReplicatedStorage").FE.PlayerOwnsPass:InvokeServer(unpack(args))
+        end
+        wait()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = saved
+    end
+})
+
+AutoBuySection1:AddButton({
+    Name = "Buy M249 ($) (G)",
+    Callback = function()
+        saved = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+        local plr = game:service"Players".LocalPlayer;
+        local tween_s = game:service"TweenService";
+        local info = TweenInfo.new(0,Enum.EasingStyle.Quad); -- 1 is the speed of it, set to 0 for the fastest
+        function tp(...)
+           local tic_k = tick();
+           local params = {...};
+           local cframe = CFrame.new(params[1],params[2],params[3]);
+           local tween,err = pcall(function()
+               local tween = tween_s:Create(plr.Character["HumanoidRootPart"],info,{CFrame=cframe});
+               tween:Play();
+           end)
+           if not tween then return err end
+        end
+        tp(-1225, 36, -186);
+        wait(.2)
+        local args = {
+            [1] = 5743922
+        }
+        
+        game:GetService("ReplicatedStorage").FE.PlayerOwnsPass:InvokeServer(unpack(args))
+        wait()
+        local args = {
+            [1] = "M249"
+        }
+        
+        game:GetService("ReplicatedStorage").FE.BuyGun:InvokeServer(unpack(args))
+        wait()
+        local args = {
+            [1] = "M249",
+            [2] = true
+        }
+        
+        game:GetService("ReplicatedStorage").FE.EquipGun:InvokeServer(unpack(args))
+        wait()
+        local args = {
+            [1] = game:GetService("Players").LocalPlayer
+        }
+        
+        game:GetService("ReplicatedStorage").FE.GetGunData:InvokeServer(unpack(args))
+        
+        wait()
+        for i = 1,4 do
+        local args = {
+            [1] = 5743922
+        }
+        
+        game:GetService("ReplicatedStorage").FE.PlayerOwnsPass:InvokeServer(unpack(args))
+        end
+        wait()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = saved
+    end
+})
+
+AutoBuySection1:AddButton({
+    Name = "Buy Remington MSR ($2,500) (G)",
+    Callback = function()
+        saved = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+        local plr = game:service"Players".LocalPlayer;
+        local tween_s = game:service"TweenService";
+        local info = TweenInfo.new(0,Enum.EasingStyle.Quad); -- 1 is the speed of it, set to 0 for the fastest
+        function tp(...)
+           local tic_k = tick();
+           local params = {...};
+           local cframe = CFrame.new(params[1],params[2],params[3]);
+           local tween,err = pcall(function()
+               local tween = tween_s:Create(plr.Character["HumanoidRootPart"],info,{CFrame=cframe});
+               tween:Play();
+           end)
+           if not tween then return err end
+        end
+        tp(-1225, 36, -186);
+        wait(.2)
+        local args = {
+            [1] = 5743922
+        }
+        
+        game:GetService("ReplicatedStorage").FE.PlayerOwnsPass:InvokeServer(unpack(args))
+        wait()
+        local args = {
+            [1] = "Remington MSR"
+        }
+        
+        game:GetService("ReplicatedStorage").FE.BuyGun:InvokeServer(unpack(args))
+        wait()
+        local args = {
+            [1] = "Remington MSR",
+            [2] = true
+        }
+        
+        game:GetService("ReplicatedStorage").FE.EquipGun:InvokeServer(unpack(args))
+        wait()
+        local args = {
+            [1] = game:GetService("Players").LocalPlayer
+        }
+        
+        game:GetService("ReplicatedStorage").FE.GetGunData:InvokeServer(unpack(args))
+        
+        wait()
+        for i = 1,4 do
+        local args = {
+            [1] = 5743922
+        }
+        
+        game:GetService("ReplicatedStorage").FE.PlayerOwnsPass:InvokeServer(unpack(args))
+        end
+        wait()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = saved
+    end
+})
+-- section 2
+AutoBuySection2:AddButton({
+    Name = "Buy RFID Disruptor ($415)",
+    Callback = function()
+        saved = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+        local plr = game:service"Players".LocalPlayer;
+        local tween_s = game:service"TweenService";
+        local info = TweenInfo.new(0,Enum.EasingStyle.Quad); -- 1 is the speed of it, set to 0 for the fastest
+        function tp(...)
+        local tic_k = tick();
+        local params = {...};
+        local cframe = CFrame.new(params[1],params[2],params[3]);
+        local tween,err = pcall(function()
+            local tween = tween_s:Create(plr.Character["HumanoidRootPart"],info,{CFrame=cframe});
+            tween:Play();
+        end)
+        if not tween then return err end
+        end
+        tp(-435, 25, -708);
+        wait(.2)
+        local args = {
+            [1] = "RFID Disruptor"
+        }
+
+        game:GetService("ReplicatedStorage").FE.BuyGear:InvokeServer(unpack(args))
+        wait()
+        local args = {
+            [1] = game:GetService("Players").LocalPlayer
+        }
+
+        game:GetService("ReplicatedStorage").FE.GetGearData:InvokeServer(unpack(args))
+        wait()
+        game:GetService("ReplicatedStorage").FE.GetCurrency:InvokeServer()
+        wait()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = saved
+    end
+})
+
+AutoBuySection2:AddButton({
+    Name = "Buy Lockpick ($675)",
+    Callback = function()
+        saved = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+        local plr = game:service"Players".LocalPlayer;
+        local tween_s = game:service"TweenService";
+        local info = TweenInfo.new(0,Enum.EasingStyle.Quad); -- 1 is the speed of it, set to 0 for the fastest
+        function tp(...)
+        local tic_k = tick();
+        local params = {...};
+        local cframe = CFrame.new(params[1],params[2],params[3]);
+        local tween,err = pcall(function()
+            local tween = tween_s:Create(plr.Character["HumanoidRootPart"],info,{CFrame=cframe});
+            tween:Play();
+        end)
+        if not tween then return err end
+        end
+        tp(-435, 25, -708);
+        wait(.2)
+        local args = {
+            [1] = "Lockpick"
+        }
+
+        game:GetService("ReplicatedStorage").FE.BuyGear:InvokeServer(unpack(args))
+        wait()
+        local args = {
+            [1] = game:GetService("Players").LocalPlayer
+        }
+
+        game:GetService("ReplicatedStorage").FE.GetGearData:InvokeServer(unpack(args))
+        wait()
+        game:GetService("ReplicatedStorage").FE.GetCurrency:InvokeServer()
+        wait()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = saved
+    end
+})
+
+AutoBuySection2:AddButton({
+    Name = "Buy Drill ($1,000)",
+    Callback = function()
+        saved = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+        local plr = game:service"Players".LocalPlayer;
+        local tween_s = game:service"TweenService";
+        local info = TweenInfo.new(0,Enum.EasingStyle.Quad); -- 1 is the speed of it, set to 0 for the fastest
+        function tp(...)
+        local tic_k = tick();
+        local params = {...};
+        local cframe = CFrame.new(params[1],params[2],params[3]);
+        local tween,err = pcall(function()
+            local tween = tween_s:Create(plr.Character["HumanoidRootPart"],info,{CFrame=cframe});
+            tween:Play();
+        end)
+        if not tween then return err end
+        end
+        tp(-435, 25, -708);
+        wait(.2)
+        local args = {
+            [1] = "Drill"
+        }
+
+        game:GetService("ReplicatedStorage").FE.BuyGear:InvokeServer(unpack(args))
+        wait()
+        local args = {
+            [1] = game:GetService("Players").LocalPlayer
+        }
+
+        game:GetService("ReplicatedStorage").FE.GetGearData:InvokeServer(unpack(args))
+        wait()
+        game:GetService("ReplicatedStorage").FE.GetCurrency:InvokeServer()
+        wait()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = saved
+    end
+})
+
+AutoBuySection2:AddButton({
+    Name = "Buy Flashlight ($290)",
+    Callback = function()
+        saved = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+        local plr = game:service"Players".LocalPlayer;
+        local tween_s = game:service"TweenService";
+        local info = TweenInfo.new(0,Enum.EasingStyle.Quad); -- 1 is the speed of it, set to 0 for the fastest
+        function tp(...)
+        local tic_k = tick();
+        local params = {...};
+        local cframe = CFrame.new(params[1],params[2],params[3]);
+        local tween,err = pcall(function()
+            local tween = tween_s:Create(plr.Character["HumanoidRootPart"],info,{CFrame=cframe});
+            tween:Play();
+        end)
+        if not tween then return err end
+        end
+        tp(-435, 25, -708);
+        wait(.2)
+        local args = {
+            [1] = "Flashlight"
+        }
+
+        game:GetService("ReplicatedStorage").FE.BuyGear:InvokeServer(unpack(args))
+        wait()
+        local args = {
+            [1] = game:GetService("Players").LocalPlayer
+        }
+
+        game:GetService("ReplicatedStorage").FE.GetGearData:InvokeServer(unpack(args))
+        wait()
+        game:GetService("ReplicatedStorage").FE.GetCurrency:InvokeServer()
+        wait()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = saved
+    end
+})
+
+AutoBuySection2:AddButton({
+    Name = "Buy Scanner ($950)",
+    Callback = function()
+        saved = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+        local plr = game:service"Players".LocalPlayer;
+        local tween_s = game:service"TweenService";
+        local info = TweenInfo.new(0,Enum.EasingStyle.Quad); -- 1 is the speed of it, set to 0 for the fastest
+        function tp(...)
+        local tic_k = tick();
+        local params = {...};
+        local cframe = CFrame.new(params[1],params[2],params[3]);
+        local tween,err = pcall(function()
+            local tween = tween_s:Create(plr.Character["HumanoidRootPart"],info,{CFrame=cframe});
+            tween:Play();
+        end)
+        if not tween then return err end
+        end
+        tp(-435, 25, -708);
+        wait(.2)
+        local args = {
+            [1] = "Scanner"
+        }
+
+        game:GetService("ReplicatedStorage").FE.BuyGear:InvokeServer(unpack(args))
+        wait()
+        local args = {
+            [1] = game:GetService("Players").LocalPlayer
+        }
+
+        game:GetService("ReplicatedStorage").FE.GetGearData:InvokeServer(unpack(args))
+        wait()
+        game:GetService("ReplicatedStorage").FE.GetCurrency:InvokeServer()
+        wait()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = saved
+    end
+})
+
+AutoBuySection2:AddButton({
+    Name = "Buy Baseball Bat ($700) (G)",
+    Callback = function()
+        saved = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+        local plr = game:service"Players".LocalPlayer;
+        local tween_s = game:service"TweenService";
+        local info = TweenInfo.new(0,Enum.EasingStyle.Quad); -- 1 is the speed of it, set to 0 for the fastest
+        function tp(...)
+        local tic_k = tick();
+        local params = {...};
+        local cframe = CFrame.new(params[1],params[2],params[3]);
+        local tween,err = pcall(function()
+            local tween = tween_s:Create(plr.Character["HumanoidRootPart"],info,{CFrame=cframe});
+            tween:Play();
+        end)
+        if not tween then return err end
+        end
+        tp(-435, 25, -708);
+        wait(.2)
+        local args = {
+            [1] = "Baseball Bat"
+        }
+
+        game:GetService("ReplicatedStorage").FE.BuyGear:InvokeServer(unpack(args))
+        wait()
+        local args = {
+            [1] = game:GetService("Players").LocalPlayer
+        }
+
+        game:GetService("ReplicatedStorage").FE.GetGearData:InvokeServer(unpack(args))
+        wait()
+        game:GetService("ReplicatedStorage").FE.GetCurrency:InvokeServer()
+        wait()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = saved
+    end
+})
+
+AutoBuySection2:AddButton({
+    Name = "Buy Hammer ($550) (G)",
+    Callback = function()
+        saved = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+        local plr = game:service"Players".LocalPlayer;
+        local tween_s = game:service"TweenService";
+        local info = TweenInfo.new(0,Enum.EasingStyle.Quad); -- 1 is the speed of it, set to 0 for the fastest
+        function tp(...)
+        local tic_k = tick();
+        local params = {...};
+        local cframe = CFrame.new(params[1],params[2],params[3]);
+        local tween,err = pcall(function()
+            local tween = tween_s:Create(plr.Character["HumanoidRootPart"],info,{CFrame=cframe});
+            tween:Play();
+        end)
+        if not tween then return err end
+        end
+        tp(-435, 25, -708);
+        wait(.2)
+        local args = {
+            [1] = "Hammer"
+        }
+
+        game:GetService("ReplicatedStorage").FE.BuyGear:InvokeServer(unpack(args))
+        wait()
+        local args = {
+            [1] = game:GetService("Players").LocalPlayer
+        }
+
+        game:GetService("ReplicatedStorage").FE.GetGearData:InvokeServer(unpack(args))
+        wait()
+        game:GetService("ReplicatedStorage").FE.GetCurrency:InvokeServer()
+        wait()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = saved
+    end
+})
+
+AutoBuySection2:AddButton({
+    Name = "Buy Knife ($1,200) (G)",
+    Callback = function()
+        saved = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+        local plr = game:service"Players".LocalPlayer;
+        local tween_s = game:service"TweenService";
+        local info = TweenInfo.new(0,Enum.EasingStyle.Quad); -- 1 is the speed of it, set to 0 for the fastest
+        function tp(...)
+        local tic_k = tick();
+        local params = {...};
+        local cframe = CFrame.new(params[1],params[2],params[3]);
+        local tween,err = pcall(function()
+            local tween = tween_s:Create(plr.Character["HumanoidRootPart"],info,{CFrame=cframe});
+            tween:Play();
+        end)
+        if not tween then return err end
+        end
+        tp(-435, 25, -708);
+        wait(.2)
+        local args = {
+            [1] = "Knife"
+        }
+
+        game:GetService("ReplicatedStorage").FE.BuyGear:InvokeServer(unpack(args))
+        wait()
+        local args = {
+            [1] = game:GetService("Players").LocalPlayer
+        }
+
+        game:GetService("ReplicatedStorage").FE.GetGearData:InvokeServer(unpack(args))
+        wait()
+        game:GetService("ReplicatedStorage").FE.GetCurrency:InvokeServer()
+        wait()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = saved
+    end
+})
+
+-- Teleports Page
+local TeleportTab = Window:CreateTab({
+    Name = "TPs"
+    })
+    
+local TeleportSection1 = TeleportTab:CreateSection({
+    Name = "Main Locations"
+})
+
+local TeleportSection2 = TeleportTab:CreateSection({
+    Name = "Sniping Areas"
+})
+
+local TeleportSection3 = TeleportTab:CreateSection({
+    Name = "AFK Areas"
+})
+
+TeleportSection1:AddButton({
+    Name = "Spawn",
+    Callback = function()
+        local plr = game:service"Players".LocalPlayer;
+        local tween_s = game:service"TweenService";
+        local info = TweenInfo.new(0,Enum.EasingStyle.Quad); -- 1 is the speed of it, set to 0 for the fastest
+        function tp(...)
+        local tic_k = tick();
+        local params = {...};
+        local cframe = CFrame.new(params[1],params[2],params[3]);
+        local tween,err = pcall(function()
+            local tween = tween_s:Create(plr.Character["HumanoidRootPart"],info,{CFrame=cframe});
+            tween:Play();
+        end)
+        if not tween then return err end
+        end
+        tp(-529, 23, 641);
+    end
+})
+
+TeleportSection1:AddButton({
+    Name = "Bank",
+    Callback = function()
+        local plr = game:service"Players".LocalPlayer;
+        local tween_s = game:service"TweenService";
+        local info = TweenInfo.new(0,Enum.EasingStyle.Quad); -- 1 is the speed of it, set to 0 for the fastest
+        function tp(...)
+        local tic_k = tick();
+        local params = {...};
+        local cframe = CFrame.new(params[1],params[2],params[3]);
+        local tween,err = pcall(function()
+            local tween = tween_s:Create(plr.Character["HumanoidRootPart"],info,{CFrame=cframe});
+            tween:Play();
+        end)
+        if not tween then return err end
+        end
+        tp(-987, 23, 448);
+    end
+})
+
+TeleportSection1:AddButton({
+    Name = "Suburbs",
+    Callback = function()
+        local plr = game:service"Players".LocalPlayer;
+        local tween_s = game:service"TweenService";
+        local info = TweenInfo.new(0,Enum.EasingStyle.Quad); -- 1 is the speed of it, set to 0 for the fastest
+        function tp(...)
+        local tic_k = tick();
+        local params = {...};
+        local cframe = CFrame.new(params[1],params[2],params[3]);
+        local tween,err = pcall(function()
+            local tween = tween_s:Create(plr.Character["HumanoidRootPart"],info,{CFrame=cframe});
+            tween:Play();
+        end)
+        if not tween then return err end
+        end
+        tp(-649, -9, -1387);
+    end
+})
+
+TeleportSection1:AddButton({
+    Name = "Sheriff's Office",
+    Callback = function()
+        local plr = game:service"Players".LocalPlayer;
+        local tween_s = game:service"TweenService";
+        local info = TweenInfo.new(0,Enum.EasingStyle.Quad); -- 1 is the speed of it, set to 0 for the fastest
+        function tp(...)
+        local tic_k = tick();
+        local params = {...};
+        local cframe = CFrame.new(params[1],params[2],params[3]);
+        local tween,err = pcall(function()
+            local tween = tween_s:Create(plr.Character["HumanoidRootPart"],info,{CFrame=cframe});
+            tween:Play();
+        end)
+        if not tween then return err end
+        end
+        tp(-888, 25, -741);
+    end
+})
+
+TeleportSection1:AddButton({
+    Name = "Jail",
+    Callback = function()
+        local plr = game:service"Players".LocalPlayer;
+        local tween_s = game:service"TweenService";
+        local info = TweenInfo.new(0,Enum.EasingStyle.Quad); -- 1 is the speed of it, set to 0 for the fastest
+        function tp(...)
+        local tic_k = tick();
+        local params = {...};
+        local cframe = CFrame.new(params[1],params[2],params[3]);
+        local tween,err = pcall(function()
+            local tween = tween_s:Create(plr.Character["HumanoidRootPart"],info,{CFrame=cframe});
+            tween:Play();
+        end)
+        if not tween then return err end
+        end
+        tp(1339, 4, -335);
+    end
+})
+
+TeleportSection1:AddButton({
+    Name = "Paint Shop",
+    Callback = function()
+        local plr = game:service"Players".LocalPlayer;
+        local tween_s = game:service"TweenService";
+        local info = TweenInfo.new(0,Enum.EasingStyle.Quad); -- 1 is the speed of it, set to 0 for the fastest
+        function tp(...)
+        local tic_k = tick();
+        local params = {...};
+        local cframe = CFrame.new(params[1],params[2],params[3]);
+        local tween,err = pcall(function()
+            local tween = tween_s:Create(plr.Character["HumanoidRootPart"],info,{CFrame=cframe});
+            tween:Play();
+        end)
+        if not tween then return err end
+        end
+        tp(-737, 23, 193);
+    end
+})
+
+TeleportSection1:AddButton({
+    Name = "Gas Station",
+    Callback = function()
+        local plr = game:service"Players".LocalPlayer;
+        local tween_s = game:service"TweenService";
+        local info = TweenInfo.new(0,Enum.EasingStyle.Quad); -- 1 is the speed of it, set to 0 for the fastest
+        function tp(...)
+        local tic_k = tick();
+        local params = {...};
+        local cframe = CFrame.new(params[1],params[2],params[3]);
+        local tween,err = pcall(function()
+            local tween = tween_s:Create(plr.Character["HumanoidRootPart"],info,{CFrame=cframe});
+            tween:Play();
+        end)
+        if not tween then return err end
+        end
+        tp(-999, 23, 634);
+    end
+})
+
+TeleportSection1:AddButton({
+    Name = "Barn",
+    Callback = function()
+        local plr = game:service"Players".LocalPlayer;
+        local tween_s = game:service"TweenService";
+        local info = TweenInfo.new(0,Enum.EasingStyle.Quad); -- 1 is the speed of it, set to 0 for the fastest
+        function tp(...)
+        local tic_k = tick();
+        local params = {...};
+        local cframe = CFrame.new(params[1],params[2],params[3]);
+        local tween,err = pcall(function()
+            local tween = tween_s:Create(plr.Character["HumanoidRootPart"],info,{CFrame=cframe});
+            tween:Play();
+        end)
+        if not tween then return err end
+        end
+        tp(812, 41, -1092);
+    end
+})
+
+TeleportSection1:AddButton({
+    Name = "Jewelry Store",
+    Callback = function()
+        local plr = game:service"Players".LocalPlayer;
+        local tween_s = game:service"TweenService";
+        local info = TweenInfo.new(0,Enum.EasingStyle.Quad); -- 1 is the speed of it, set to 0 for the fastest
+        function tp(...)
+        local tic_k = tick();
+        local params = {...};
+        local cframe = CFrame.new(params[1],params[2],params[3]);
+        local tween,err = pcall(function()
+            local tween = tween_s:Create(plr.Character["HumanoidRootPart"],info,{CFrame=cframe});
+            tween:Play();
+        end)
+        if not tween then return err end
+        end
+        tp(-464, 24, -411);
+    end
+})
+
+TeleportSection1:AddButton({
+    Name = "Tool Store",
+    Callback = function()
+        local plr = game:service"Players".LocalPlayer;
+        local tween_s = game:service"TweenService";
+        local info = TweenInfo.new(0,Enum.EasingStyle.Quad); -- 1 is the speed of it, set to 0 for the fastest
+        function tp(...)
+        local tic_k = tick();
+        local params = {...};
+        local cframe = CFrame.new(params[1],params[2],params[3]);
+        local tween,err = pcall(function()
+            local tween = tween_s:Create(plr.Character["HumanoidRootPart"],info,{CFrame=cframe});
+            tween:Play();
+        end)
+        if not tween then return err end
+        end
+        tp(-446, 25, -726);
+    end
+})
+
+TeleportSection1:AddButton({
+    Name = "Gun Store",
+    Callback = function()
+        local plr = game:service"Players".LocalPlayer;
+        local tween_s = game:service"TweenService";
+        local info = TweenInfo.new(0,Enum.EasingStyle.Quad); -- 1 is the speed of it, set to 0 for the fastest
+        function tp(...)
+        local tic_k = tick();
+        local params = {...};
+        local cframe = CFrame.new(params[1],params[2],params[3]);
+        local tween,err = pcall(function()
+            local tween = tween_s:Create(plr.Character["HumanoidRootPart"],info,{CFrame=cframe});
+            tween:Play();
+        end)
+        if not tween then return err end
+        end
+        tp(-1252, 24, -198);
+    end
+})
+
+TeleportSection1:AddButton({
+    Name = "Bunker",
+    Callback = function()
+        local plr = game:service"Players".LocalPlayer;
+        local tween_s = game:service"TweenService";
+        local info = TweenInfo.new(0,Enum.EasingStyle.Quad); -- 1 is the speed of it, set to 0 for the fastest
+        function tp(...)
+        local tic_k = tick();
+        local params = {...};
+        local cframe = CFrame.new(params[1],params[2],params[3]);
+        local tween,err = pcall(function()
+            local tween = tween_s:Create(plr.Character["HumanoidRootPart"],info,{CFrame=cframe});
+            tween:Play();
+        end)
+        if not tween then return err end
+        end
+        tp(-1073, 2466, -528);
+    end
+})
+-- section 2
+TeleportSection2:AddButton({
+    Name = "City Sniper",
+    Callback = function()
+        local plr = game:service"Players".LocalPlayer;
+        local tween_s = game:service"TweenService";
+        local info = TweenInfo.new(0,Enum.EasingStyle.Quad); -- 1 is the speed of it, set to 0 for the fastest
+        function tp(...)
+        local tic_k = tick();
+        local params = {...};
+        local cframe = CFrame.new(params[1],params[2],params[3]);
+        local tween,err = pcall(function()
+            local tween = tween_s:Create(plr.Character["HumanoidRootPart"],info,{CFrame=cframe});
+            tween:Play();
+        end)
+        if not tween then return err end
+        end
+        tp(-242, 144, 459);
+    end
+})
+
+TeleportSection2:AddButton({
+    Name = "Paint Shop",
+    Callback = function()
+        local plr = game:service"Players".LocalPlayer;
+        local tween_s = game:service"TweenService";
+        local info = TweenInfo.new(0,Enum.EasingStyle.Quad); -- 1 is the speed of it, set to 0 for the fastest
+        function tp(...)
+        local tic_k = tick();
+        local params = {...};
+        local cframe = CFrame.new(params[1],params[2],params[3]);
+        local tween,err = pcall(function()
+            local tween = tween_s:Create(plr.Character["HumanoidRootPart"],info,{CFrame=cframe});
+            tween:Play();
+        end)
+        if not tween then return err end
+        end
+        tp(-568, 64, 242);
+    end
+})
+
+TeleportSection2:AddButton({
+    Name = "Spawn",
+    Callback = function()
+        local plr = game:service"Players".LocalPlayer;
+        local tween_s = game:service"TweenService";
+        local info = TweenInfo.new(0,Enum.EasingStyle.Quad); -- 1 is the speed of it, set to 0 for the fastest
+        function tp(...)
+        local tic_k = tick();
+        local params = {...};
+        local cframe = CFrame.new(params[1],params[2],params[3]);
+        local tween,err = pcall(function()
+            local tween = tween_s:Create(plr.Character["HumanoidRootPart"],info,{CFrame=cframe});
+            tween:Play();
+        end)
+        if not tween then return err end
+        end
+        tp(-752, 74, 686);
+    end
+})
+
+TeleportSection2:AddButton({
+    Name = "Bank",
+    Callback = function()
+        local plr = game:service"Players".LocalPlayer;
+        local tween_s = game:service"TweenService";
+        local info = TweenInfo.new(0,Enum.EasingStyle.Quad); -- 1 is the speed of it, set to 0 for the fastest
+        function tp(...)
+        local tic_k = tick();
+        local params = {...};
+        local cframe = CFrame.new(params[1],params[2],params[3]);
+        local tween,err = pcall(function()
+            local tween = tween_s:Create(plr.Character["HumanoidRootPart"],info,{CFrame=cframe});
+            tween:Play();
+        end)
+        if not tween then return err end
+        end
+        tp(-808, 55, 422);
+    end
+})
+
+TeleportSection2:AddButton({
+    Name = "Police Station",
+    Callback = function()
+        local plr = game:service"Players".LocalPlayer;
+        local tween_s = game:service"TweenService";
+        local info = TweenInfo.new(0,Enum.EasingStyle.Quad); -- 1 is the speed of it, set to 0 for the fastest
+        function tp(...)
+        local tic_k = tick();
+        local params = {...};
+        local cframe = CFrame.new(params[1],params[2],params[3]);
+        local tween,err = pcall(function()
+            local tween = tween_s:Create(plr.Character["HumanoidRootPart"],info,{CFrame=cframe});
+            tween:Play();
+        end)
+        if not tween then return err end
+        end
+        tp(847, 64, 232);
+    end
+})
+-- section 3
+TeleportSection3:AddButton({
+    Name = "1st Area",
+    Callback = function()
+        local plr = game:service"Players".LocalPlayer;
+        local tween_s = game:service"TweenService";
+        local info = TweenInfo.new(0,Enum.EasingStyle.Quad); -- 1 is the speed of it, set to 0 for the fastest
+        function tp(...)
+        local tic_k = tick();
+        local params = {...};
+        local cframe = CFrame.new(params[1],params[2],params[3]);
+        local tween,err = pcall(function()
+            local tween = tween_s:Create(plr.Character["HumanoidRootPart"],info,{CFrame=cframe});
+            tween:Play();
+        end)
+        if not tween then return err end
+        end
+        tp(-1661, 200, 780);
+    end
+})
+
+-- Sound Page
+local SoundsTab = Window:CreateTab({
+    Name = "Sounds"
+    })
+    
+local SoundsSection1 = SoundsTab:CreateSection({
+    Name = "Spam Gun Fire (Equip Gun)"
+})
+
+local berettass = false
+local berettss = SoundsSection1:AddToggle({
+    Name = "Spam Beretta M9",
+    Callback = function(Berettass)
+    berettass1 = Berettass
+end})
+
+local Loop = game:GetService("RunService").RenderStepped:Connect(function()
+    if berettass1 then
+        local args = {
+            [1] = "Beretta M9",
+            [2] = game:GetService("Players").LocalPlayer.Character:FindFirstChild("Beretta M9").FrontEnd.Muzzle,
+            [3] = game:GetService("Players").LocalPlayer.Character:FindFirstChild("Beretta M9").Handle,
+            [4] = true
+        }
+
+        game:GetService("ReplicatedStorage").Guns.Remotes.GunParticles:FireServer(unpack(args))
+    end
+end)
+
+local m14ss = false
+local m14ss = SoundsSection1:AddToggle({
+    Name = "Spam M14",
+    Callback = function(M14ss)
+    m14ss1 = M14ss
+end})
+
+local Loop = game:GetService("RunService").RenderStepped:Connect(function()
+    if m14ss1 then
+        local args = {
+            [1] = "M14",
+            [2] = game:GetService("Players").LocalPlayer.Character.M14.FrontEnd.Muzzle,
+            [3] = game:GetService("Players").LocalPlayer.Character.M14.Handle,
+            [4] = true
+        }
+        
+        game:GetService("ReplicatedStorage").Guns.Remotes.GunParticles:FireServer(unpack(args))
+    end
+end)
+
+local coltss = false
+local coltss = SoundsSection1:AddToggle({
+    Name = "Spam Colt M1911",
+    Callback = function(Coltss)
+    coltss1 = Coltss
+end})
+
+local Loop = game:GetService("RunService").RenderStepped:Connect(function()
+    if coltss1 then
+        local args = {
+            [1] = "Colt M1911",
+            [2] = game:GetService("Players").LocalPlayer.Character:FindFirstChild("Colt M1911").FrontEnd.Muzzle,
+            [3] = game:GetService("Players").LocalPlayer.Character:FindFirstChild("Colt M1911").Handle,
+            [4] = true
+        }
+
+        game:GetService("ReplicatedStorage").Guns.Remotes.GunParticles:FireServer(unpack(args))
+    end
+end)
+
+local ak47ss = false
+local ak47ss = SoundsSection1:AddToggle({
+    Name = "Spam AK47",
+    Callback = function(Ak471)
+    ak471 = Ak471
+end})
+
+local Loop = game:GetService("RunService").RenderStepped:Connect(function()
+    if ak471 then
+        local args = {
+            [1] = "AK47",
+            [2] = game:GetService("Players").LocalPlayer.Character.AK47.FrontEnd.Muzzle,
+            [3] = game:GetService("Players").LocalPlayer.Character.AK47.Handle,
+            [4] = true
+        }
+        
+        game:GetService("ReplicatedStorage").Guns.Remotes.GunParticles:FireServer(unpack(args))
+    end
+end)
+
+local r870ss = false
+local r870ss = SoundsSection1:AddToggle({
+    Name = "Spam Remington 870",
+    Callback = function(R870ss)
+    r870ss1 = R870ss
+end})
+
+local Loop = game:GetService("RunService").RenderStepped:Connect(function()
+    if r870ss1 then
+        local args = {
+            [1] = "Remington 870",
+            [2] = game:GetService("Players").LocalPlayer.Character:FindFirstChild("Remington 870").FrontEnd.Muzzle,
+            [3] = game:GetService("Players").LocalPlayer.Character:FindFirstChild("Remington 870").Handle,
+            [4] = true
+        }
+
+        game:GetService("ReplicatedStorage").Guns.Remotes.GunParticles:FireServer(unpack(args))
+    end
+end)
+
+local skorpionss = false
+local skorpionss = SoundsSection1:AddToggle({
+    Name = "Spam Skorpion",
+    Callback = function(Skorpionss)
+    skorpionss1 = Skorpionss
+end})
+
+local Loop = game:GetService("RunService").RenderStepped:Connect(function()
+    if skorpionss1 then
+        local args = {
+            [1] = "Skorpion",
+            [2] = game:GetService("Players").LocalPlayer.Character.Skorpion.FrontEnd.Muzzle,
+            [3] = game:GetService("Players").LocalPlayer.Character.Skorpion.Handle,
+            [4] = true
+        }
+        
+        game:GetService("ReplicatedStorage").Guns.Remotes.GunParticles:FireServer(unpack(args))
+    end
+end)
+
+local pythonss = false
+local pythonss = SoundsSection1:AddToggle({
+    Name = "Spam Colt Python",
+    Callback = function(Pythonss)
+    pythonss1 = Pythonss
+end})
+
+local Loop = game:GetService("RunService").RenderStepped:Connect(function()
+    if pythonss1 then
+        local args = {
+            [1] = "Colt Python",
+            [2] = game:GetService("Players").LocalPlayer.Character:FindFirstChild("Colt Python").FrontEnd.Muzzle,
+            [3] = game:GetService("Players").LocalPlayer.Character:FindFirstChild("Colt Python").Handle,
+            [4] = true
+        }
+
+        game:GetService("ReplicatedStorage").Guns.Remotes.GunParticles:FireServer(unpack(args))
+    end
+end)
+
+local tecss = false
+local tecss = SoundsSection1:AddToggle({
+    Name = "Spam TEC-9",
+    Callback = function(Tecss)
+    tecss1 = Tecss
+end})
+
+local Loop = game:GetService("RunService").RenderStepped:Connect(function()
+    if tecss1 then
+        local args = {
+            [1] = "TEC-9",
+            [2] = game:GetService("Players").LocalPlayer.Character:FindFirstChild("TEC-9").FrontEnd.Muzzle,
+            [3] = game:GetService("Players").LocalPlayer.Character:FindFirstChild("TEC-9").Handle,
+            [4] = true
+        }
+
+        game:GetService("ReplicatedStorage").Guns.Remotes.GunParticles:FireServer(unpack(args))
+    end
+end)
+
+local deagless = false
+local deagless = SoundsSection1:AddToggle({
+    Name = "Spam Desert Eagle",
+    Callback = function(Deagless)
+    deagless1 = Deagless
+end})
+
+local Loop = game:GetService("RunService").RenderStepped:Connect(function()
+    if deagless1 then
+        local args = {
+            [1] = "Desert Eagle",
+            [2] = game:GetService("Players").LocalPlayer.Character:FindFirstChild("Desert Eagle").FrontEnd.Muzzle,
+            [3] = game:GetService("Players").LocalPlayer.Character:FindFirstChild("Desert Eagle").Handle,
+            [4] = true
+        }
+
+        game:GetService("ReplicatedStorage").Guns.Remotes.GunParticles:FireServer(unpack(args))
+    end
+end)
+
+local LMTss = false
+local LMTss = SoundsSection1:AddToggle({
+    Name = "Spam LMT L129A1",
+    Callback = function(LMTSs)
+    LMTss1 = LMTSs
+end})
+
+local Loop = game:GetService("RunService").RenderStepped:Connect(function()
+    if LMTss1 then
+        local args = {
+            [1] = "LMT L129A1",
+            [2] = game:GetService("Players").LocalPlayer.Character:FindFirstChild("LMT L129A1").FrontEnd.Muzzle,
+            [3] = game:GetService("Players").LocalPlayer.Character:FindFirstChild("LMT L129A1").Handle,
+            [4] = true
+        }
+
+        game:GetService("ReplicatedStorage").Guns.Remotes.GunParticles:FireServer(unpack(args))
+    end
+end)
+
+local krissss = false
+local krissss = SoundsSection1:AddToggle({
+    Name = "Spam KRISS Vector SMG",
+    Callback = function(Krissss)
+    krissss1 = Krissss
+end})
+
+local Loop = game:GetService("RunService").RenderStepped:Connect(function()
+    if krissss1 then
+        local args = {
+            [1] = "KRISS Vector SMG",
+            [2] = game:GetService("Players").LocalPlayer.Character:FindFirstChild("KRISS Vector SMG").FrontEnd.Muzzle,
+            [3] = game:GetService("Players").LocalPlayer.Character:FindFirstChild("KRISS Vector SMG").Handle,
+            [4] = true
+        }
+
+        game:GetService("ReplicatedStorage").Guns.Remotes.GunParticles:FireServer(unpack(args))
+    end
+end)
+
+local ppshss = false
+local ppshss = SoundsSection1:AddToggle({
+    Name = "Spam PPSH 41",
+    Callback = function(Ppshss)
+    ppshss1 = Ppshss
+end})
+
+local Loop = game:GetService("RunService").RenderStepped:Connect(function()
+    if ppshss1 then
+        local args = {
+            [1] = "PPSH 41",
+            [2] = game:GetService("Players").LocalPlayer.Character:FindFirstChild("PPSH 41").FrontEnd.Muzzle,
+            [3] = game:GetService("Players").LocalPlayer.Character:FindFirstChild("PPSH 41").Handle,
+            [4] = true
+        }
+
+        game:GetService("ReplicatedStorage").Guns.Remotes.GunParticles:FireServer(unpack(args))
+    end
+end)
+
+local m249ss = false
+local m249ss = SoundsSection1:AddToggle({
+    Name = "Spam M249",
+    Callback = function(M249ss)
+    m249ss1 = M249ss
+end})
+
+local Loop = game:GetService("RunService").RenderStepped:Connect(function()
+    if m249ss1 then
+        local args = {
+            [1] = "M249",
+            [2] = game:GetService("Players").LocalPlayer.Character.M249.FrontEnd.Muzzle,
+            [3] = game:GetService("Players").LocalPlayer.Character.M249.Handle,
+            [4] = true
+        }
+        
+        game:GetService("ReplicatedStorage").Guns.Remotes.GunParticles:FireServer(unpack(args))
+    end
+end)
+
+local msrss = false
+local msrss = SoundsSection1:AddToggle({
+    Name = "Spam Remington MSR",
+    Callback = function(Msrss)
+    msrss1 = Msrss
+end})
+
+local Loop = game:GetService("RunService").RenderStepped:Connect(function()
+    if msrss1 then
+        local args = {
+            [1] = "PPSH 41",
+            [2] = game:GetService("Players").LocalPlayer.Character:FindFirstChild("Remington MSR").FrontEnd.Muzzle,
+            [3] = game:GetService("Players").LocalPlayer.Character:FindFirstChild("Remington MSR").Handle,
+            [4] = true
+        }
+
+        game:GetService("ReplicatedStorage").Guns.Remotes.GunParticles:FireServer(unpack(args))
+    end
+end)
+-- Self Page
+local SelfTab = Window:CreateTab({
+    Name = "Self"
+    })
+    
+local SelfSection1 = SelfTab:CreateSection({
+    Name = "Character"
+})
+
+local disablephone = false
+local disablephone = SelfSection1:AddToggle({
+    Name = "Disable Phone Calls",
+    Callback = function(DisablePhone)
+    disablephone1 = DisablePhone
+end})
+
+local Loop = game:GetService("RunService").RenderStepped:Connect(function()
+    if disablephone1 then
+        local args = {
+            [1] = "Decline"
+        }
+
+        game:GetService("ReplicatedStorage").Phone.Phone:FireServer(unpack(args))
+    end
+end)
+
+-- Extra Page
+local ExtraTab = Window:CreateTab({
+    Name = "Extra"
+    })
+    
+local ExtraSection1 = ExtraTab:CreateSection({
+    Name = "Graphics"
+})
+
+ExtraSection1:AddButton({
+    Name = "Boost FPS",
+    Callback = function()
+        local RemovePlrGuis = false
+local No3DRendering = false
+
+if not game['Loaded'] or not game:GetService('Players')['LocalPlayer'] then
+    game['Loaded']:Wait();
+    game:WaitForChild(game:GetService('Players'));
+    game:GetService('Players'):WaitForChild(game:GetService('Players').LocalPlayer.Name)
+end
+
+local LP = game:GetService('Players').LocalPlayer
+
+settings().Physics.PhysicsEnvironmentalThrottle = 1
+settings().Rendering.QualityLevel = 'Level01'
+UserSettings():GetService('UserGameSettings').MasterVolume = 0
+
+setsimulationradius(0, 0)
+setfpscap(144)
+
+for _, v in next, game:GetDescendants() do
+    if v:IsA('Workspace') then
+        sethiddenproperty(v, 'StreamingTargetRadius', 64)
+        sethiddenproperty(v, 'StreamingPauseMode', 2)
+        sethiddenproperty(v.Terrain, 'Decoration', false)
+        v.Terrain.Elasticity = 0
+        v.Terrain.WaterWaveSize = 0
+        v.Terrain.WaterWaveSpeed = 0
+        v.Terrain.WaterReflectance = 0
+        v.Terrain.WaterTransparency = 1
+    elseif v:IsA('RunService') and No3DRendering then
+        v:Set3dRenderingEnabled(false)
+        v:setThrottleFramerateEnabled(true)
+    elseif v:IsA('NetworkClient') then
+        v:SetOutgoingKBPSLimit(100)
+    elseif v:IsA('Lighting') then
+        sethiddenproperty(v, 'Technology', 2)
+        v.GlobalShadows = false
+        v.FogEnd = 1/0
+        v.Brightness = 0
+    elseif v:IsA('Model') then
+        sethiddenproperty(v, 'LevelOfDetail', 1)
+    elseif LP and v == LP then
+        v.ReplicationFocus = nil
+    elseif v:IsA('Decal') or v:IsA('Texture') or v:IsA('Beam') then
+        v.Transparency = 1
+    elseif v:IsA('Fire') or v:IsA('SpotLight') or v:IsA('Smoke') or v:IsA('Sparkles') then
+        v.Enabled = false
+    elseif v:IsA('SpecialMesh') then
+        v.TextureId = ''
+        v.MeshId = ''
+    elseif v:IsA('ParticleEmitter') or v:IsA('Trail') then
+        v.Lifetime = NumberRange.new(0)
+    elseif v:IsA('BlurEffect') or v:IsA('SunRaysEffect') or v:IsA('ColorCorrectionEffect') or v:IsA('BloomEffect') or v:IsA('DepthOfFieldEffect')  then
+        v.Enabled = false
+    elseif v:IsA('BasePart') and not v:IsA('MeshPart') then
+        v.Reflectance = 0
+        v.Material = 'SmoothPlastic'
+    elseif v:IsA('Pants') or v:IsA('Shirt') then
+        v[v.ClassName..'Template'] = ''
+    elseif v:IsA('Explosion') then
+        v.BlastPressure = 0
+        v.BlastRadius = 0
+        v.Visible = false
+        v.Position = Vector3.new(0, 0, 0)
+    elseif v:IsA('ForceField') then
+        v.Visible = false
+    elseif v:IsA('ShirtGraphic') then
+        v.Graphic = ''
+    elseif v:IsA('MeshPart') then
+        v.MeshId = ''
+        v.TextureID = ''
+        v.Reflectance = 0
+        v.Material = 'SmoothPlastic'
+    elseif v:IsA('CharacterMesh') then
+        v.BaseTextureId = ''
+        v.MeshId = ''
+        v.OverlayTextureId = ''
+    elseif v:IsA('Sound') then
+        v.SoundId = ''
+        v.Volume = 0
+    elseif v:IsA('PlayerGui') and RemovePlrGuis then
+        v:ClearAllChildren()
+    end
+end
+
+local WorkspaceChildAdded;WorkspaceChildAdded = workspace.DescendantAdded:Connect(function(v)
+    wait()
+    if v:IsA('Model') then
+        sethiddenproperty(v, 'LevelOfDetail', 1)
+    elseif LP and v == LP then
+        v.ReplicationFocus = nil
+    elseif v:IsA('Decal') or v:IsA('Texture') or v:IsA('Beam') then
+        v.Transparency = 1
+    elseif v:IsA('Fire') or v:IsA('SpotLight') or v:IsA('Smoke') or v:IsA('Sparkles') then
+        v.Enabled = false
+    elseif v:IsA('SpecialMesh') then
+        v.TextureId = ''
+        v.MeshId = ''
+    elseif v:IsA('ParticleEmitter') or v:IsA('Trail') then
+        v.Lifetime = NumberRange.new(0)
+    elseif v:IsA('BlurEffect') or v:IsA('SunRaysEffect') or v:IsA('ColorCorrectionEffect') or v:IsA('BloomEffect') or v:IsA('DepthOfFieldEffect')  then
+        v.Enabled = false
+    elseif v:IsA('BasePart') and not v:IsA('MeshPart') then
+        v.Reflectance = 0
+        v.Material = 'SmoothPlastic'
+    elseif v:IsA('Pants') or v:IsA('Shirt') then
+        v[v.ClassName..'Template'] = ''
+    elseif v:IsA('Explosion') then
+        v.BlastPressure = 0
+        v.BlastRadius = 0
+        v.Visible = false
+        v.Position = Vector3.new(0, 0, 0)
+    elseif v:IsA('ForceField') then
+        v.Visible = false
+    elseif v:IsA('ShirtGraphic') then
+        v.Graphic = ''
+    elseif v:IsA('MeshPart') then
+        v.MeshId = ''
+        v.TextureID = ''
+        v.Reflectance = 0
+        v.Material = 'SmoothPlastic'
+    elseif v:IsA('CharacterMesh') then
+        v.BaseTextureId = ''
+        v.MeshId = ''
+        v.OverlayTextureId = ''
+    elseif v:IsA('Sound') then
+        v.SoundId = ''
+        v.Volume = 0
+    end
+end)
+    end
+})
+
+local ExtraSection2 = ExtraTab:CreateSection({
+    Name = "Server"
+})
+
+ExtraSection2:AddButton({
+    Name = "Rejoin",
+    Callback = function()
+        game:GetService("TeleportService"):Teleport(game.PlaceId, game.Players.LocalPlayer)
+    end
+})
+
+ExtraSection2:AddButton({
+    Name = "Server Hop",
+    Callback = function()
+        local Servers = game.HttpService:JSONDecode(game:HttpGet("https://games.roblox.com/v1/games/".. game.PlaceId.. "/servers/Public?sortOrder=Asc&limit=100"))
+        for i,v in pairs(Servers.data) do
+            if v.playing ~= v.maxPlayers then
+                game:GetService('TeleportService'):TeleportToPlaceInstance(game.PlaceId, v.id)
+            end
+        end
+    end
+})
